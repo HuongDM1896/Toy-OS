@@ -8,7 +8,8 @@ I am boring
 
 ## Overview
 
-This project demonstrates how to boot and shut down secondary cores in an ARMv8 environment using a minimal toy operating system. It’s a great exercise to understand low-level parallelism, core startup, and synchronization in ARM.
+how to boot and shut down secondary cores in an ARMv8 environment using a minimal toy operating system.
+low-level parallelism, core startup, and synchronization in ARM.
 
 ## Project Structure
 ```
@@ -30,7 +31,7 @@ toy-os/
 - AArch64 GCC toolchain (`aarch64-none-elf-gcc`)
 - `make`
 
-You can install the toolchain via:
+Install toolchain via:
 
 ```bash
 sudo apt install gcc-aarch64-linux-gnu
@@ -46,7 +47,7 @@ To build the kernel:
 ```
 make
 ```
-This will produce a kernel8.img binary you can boot in QEMU.
+Produce a kernel8.img binary, can boot in QEMU.
 
 Running in QEMU
 ```bash
@@ -62,7 +63,7 @@ Expected Output:
 Core 0: Booting Core 1...
 Core 1: Hello from Core 1!
 ```
-If you see the above lines, it means:  
+It means:  
 - Core 0 successfully initialized
 - Core 1 woke from its spin loop and jumped to the specified entry point
   
